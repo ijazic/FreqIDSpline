@@ -1,0 +1,11 @@
+useDynLib(FreqIDSpline)
+
+export(FreqID_HRegSplines)
+
+importFrom(Rcpp, evalCpp)
+import(nleqslv)
+import(splines2)
+import(Formula)
+importFrom("stats", "formula", "integrate", "model.frame", "predict")
+importFrom("utils", "combn")
+

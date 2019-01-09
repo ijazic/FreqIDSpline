@@ -1,0 +1,20 @@
+Package: FreqIDSpline
+Title: Illness-death models accommodating weights and flexible B-spline
+        parameterizations of the baseline hazards
+Version: 0.2.0
+Date: 2019-01-08
+Author: Ina Jazic
+Maintainer: Ina Jazic <inj466@mail.harvard.edu>
+Description: Multistate models are considered to perform the analysis of semi-competing 
+    risks data. The functions contained in this package will be included in an upcoming 
+    release of the SemiCompRisks R package. This package extends the flexibility of 
+    frequentist illness-death models by (1) accommodating user-specified weights, 
+    permitting the analysis of semi-competing risks data arising from a nested case-
+    control study, and (2) parameterizing the baseline hazards using B-splines.
+Depends: R (>= 2.11.0), Formula, nleqslv, splines2
+Imports: Rcpp (>= 0.11.0)
+LinkingTo: Rcpp, RcppGSL
+License: GPL (>= 2)
+NeedsCompilation: yes
+Packaged: 2019-01-09 01:02:57 UTC; inajazic
+RoxygenNote: 6.1.1

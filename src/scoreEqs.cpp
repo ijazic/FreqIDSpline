@@ -895,7 +895,7 @@ Rcpp::NumericVector spModelAll(Rcpp::NumericVector xvec, const Rcpp::NumericVect
 	
 	double u1Out = u1(y1, y2, delta1, delta2, wts, aVec, commonVec, h, nObs);
 			   
-	Rprintf("u1a, = %f \n", u1Out);		   
+	//Rprintf("u1a, = %f \n", u1Out);		   
 	
 	std::vector<double>  u2Out(nCov1);
 	u2Out = u2(y1, y2, delta1, delta2, G_x1, G_beta1, wts, Lambda01, commonVec, h, nCov1, nObs);
@@ -2016,17 +2016,17 @@ Rcpp::NumericVector spModelUniv(Rcpp::NumericVector xvec, int nObs, int nCov, in
 	
 	std::vector<double>  uBetaOut(nCov);
 	uBetaOut = uBetaUniv(y, delta, G_x1, G_beta, wts, Lambda0, nCov, nObs);
-	Rprintf("uBeta, 1 = %f \n", uBetaOut[0]);
-	Rprintf("uBeta, 2 = %f \n", uBetaOut[1]);
+	//Rprintf("uBeta, 1 = %f \n", uBetaOut[0]);
+	//Rprintf("uBeta, 2 = %f \n", uBetaOut[1]);
 	
 	std::vector<double>  uEtaOut(nKnots);
 	uEtaOut = uEtaUniv(y, delta, G_x1, G_beta, G_eta, G_Lambda0Eta, G_bpred, wts, nKnots, nObs);	
-	Rprintf("uEta, 1 = %f \n", uEtaOut[0]);
-	Rprintf("uEta, 2 = %f \n", uEtaOut[1]);
-	Rprintf("uEta, 3 = %f \n", uEtaOut[2]);
-	Rprintf("uEta, 4 = %f \n", uEtaOut[3]);
-	Rprintf("uEta, 5 = %f \n", uEtaOut[4]);
-	Rprintf("uEta, 6 = %f \n", uEtaOut[5]);
+	//Rprintf("uEta, 1 = %f \n", uEtaOut[0]);
+	//Rprintf("uEta, 2 = %f \n", uEtaOut[1]);
+	//Rprintf("uEta, 3 = %f \n", uEtaOut[2]);
+	//Rprintf("uEta, 4 = %f \n", uEtaOut[3]);
+	//Rprintf("uEta, 5 = %f \n", uEtaOut[4]);
+	//Rprintf("uEta, 6 = %f \n", uEtaOut[5]);
 	
 	// final score vector
 	Rcpp::NumericVector scoreVec(nCov+nKnots);
@@ -2165,12 +2165,12 @@ Rcpp::NumericVector spModelUnivFixedBeta(Rcpp::NumericVector xvec, Rcpp::Numeric
 	
 	std::vector<double> uEtaOut(nKnots);
 	uEtaOut = uEtaUniv(y, delta, G_x1, G_beta, G_eta, G_Lambda0Eta, G_bpred, wts, nKnots, nObs);	
-	Rprintf("uEta, 1 = %f \n", uEtaOut[0]);
-	Rprintf("uEta, 2 = %f \n", uEtaOut[1]);
-	Rprintf("uEta, 3 = %f \n", uEtaOut[2]);
-	Rprintf("uEta, 4 = %f \n", uEtaOut[3]);
-	Rprintf("uEta, 5 = %f \n", uEtaOut[4]);
-	Rprintf("uEta, 6 = %f \n", uEtaOut[5]);
+	//Rprintf("uEta, 1 = %f \n", uEtaOut[0]);
+	//Rprintf("uEta, 2 = %f \n", uEtaOut[1]);
+	//Rprintf("uEta, 3 = %f \n", uEtaOut[2]);
+	//Rprintf("uEta, 4 = %f \n", uEtaOut[3]);
+	//Rprintf("uEta, 5 = %f \n", uEtaOut[4]);
+	//Rprintf("uEta, 6 = %f \n", uEtaOut[5]);
 	
 	// final score vector
 	Rcpp::NumericVector scoreVec(nKnots);
@@ -2226,10 +2226,10 @@ Rcpp::NumericVector spModelExample(Rcpp::NumericVector params, Rcpp::NumericVect
 
 	
 	double u1Out = u1Ex(xVals, a, b, nObs);
-	Rprintf("u1, = %f \n", u1Out);		   
+	//Rprintf("u1, = %f \n", u1Out);		   
 	
 	double u2Out = u2Ex(xVals, a, b, nObs);
-	Rprintf("u2 = %f \n", u2Out);
+	//Rprintf("u2 = %f \n", u2Out);
 
   	
 	// final score vector
